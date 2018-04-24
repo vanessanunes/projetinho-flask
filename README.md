@@ -1,23 +1,25 @@
-Execute o pip install
+# Primeiro projetinho em flask
 
-$ pip install -r requirements.txt
+## Execute o pip install
 
-
-Para criar na virutal:
-
-mkvirtualenv flask
+```$ pip install -r requirements.txt```
 
 
-Para entrar:
+## Para criar na virtual:
 
-virtualenv flask
-
-
-Para acessar aplicação:
-
-http://127.0.0.1:5000/
+```mkvirtualenv flask```
 
 
-Para desativar virtual:
+## Para entrar:
 
-deactivate
+```virtualenv flask```
+
+
+## Para acessar aplicação via url:
+
+```http://127.0.0.1:5000/```
+
+
+## Para desativar virtualenv:
+
+```deactivate```
