@@ -1,13 +1,20 @@
 # Primeiro projetinho em flask
 
+Em Python 3.5
 
 ## Para entrar no virtualenv:
 
 ```. venv/bin/activate```
 
 
-## Execute o pip install
+## Execute o requirements
 
+```$ venv/bin/pip3 install -r requirements.txt```
+
+
+## Atualização em pacotes?
+
+Caso precise instalar um novo pacote no projeto, rode esse script para atualizar o requirementes:
 ```$ pip install -r requirements.txt```
 
 
@@ -15,7 +22,7 @@
 
 ### Rodar pelo terminal:
 
-```python hello.py```
+```python3 run.py runserver```
 
 ### Acessar pelo browser:
 
