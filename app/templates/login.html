@@ -1,7 +1,51 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {{ form }}
+<h2> Login </h2>
+<form action="" method="POST">
+    {{ form.csrf_token }}
+    <div class="form-group">
+        <label for="email">Usuario</label>
+            {{ form.username(class="form-control", placeholder="Seu nome de usuario") }}
+    </div>
+
+    {% if form.errors.username %}
+
+        <div class="alert alert-danger" role="alert">
+            <ul>
+                {% for e in form.errors.username %}
+                <li>{{ e }} </li>
+                {%endfor%}
+            </ul>
+        </div>
+
+    {% endif %}
+
+
+    <div class="form-group">
+        <label for="Password">Senha</label>
+            {{ form.password(class="form-control", placeholder="Sua senha") }}
+    </div>
+
+    {% if form.errors.password %}
+
+        <div class="alert alert-danger" role="alert">
+          <ul>
+                {% for e in form.errors.password %}
+                <li>{{ e }} </li>
+              {%endfor%}
+            </ul>
+        </div>
+
+    {% endif %}
+
+    <div class="form-check">
+        <label class="form-check-label" for="Lembre-me">
+            {{ form.remember_me }} Lembre-me
+        </label>
+    </div>
+  <button type="submit" class="btn btn-primary">Entrar</button>
+</form>
 
 
 {% endblock %}
