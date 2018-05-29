@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Toilter</title>
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }} - index {% endblock %}
+
+{% block content %}
     <h1>Toilter</h1>
     {% if user %}
     <p>Bem vindo ao Toilter, {{ user }}!</p>
@@ -13,7 +10,4 @@
     <p>Bem vindo ao Toilter!</p>
     {% endif %}
 
-<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"> </script>
-
-</body>
-</html>
+{% endblock %}
