@@ -15,7 +15,8 @@ Em Python 3.5
 ## Atualização em pacotes?
 
 Caso precise instalar um novo pacote no projeto, rode esse script para atualizar o requirementes:
-```$ pip install -r requirements.txt```
+
+```$ pip3 install -r requirements.txt```
 
 
 ## Para acessar aplicação via url:
