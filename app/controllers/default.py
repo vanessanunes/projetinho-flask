@@ -1,7 +1,8 @@
 from flask import render_template
-from app import app
+from app import app, db
 
 from app.models.forms import LoginForm
+from app.models.tables import User
 
 @app.route("/index")
 @app.route("/")
@@ -17,3 +18,11 @@ def login():
     else:
         print(form.errors)
     return render_template('login.html', form=form)
+
+@app.route("/teste/<info>")
+@app.route("/teste", defaults={"info": None})
+def teste(info):
+    i = User("teste", "123", "Teste Nunes", "teste@hotmail.com")
+    db.session.add(i)
+    db.session.commit()
+    return "OK"
