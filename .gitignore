@@ -2,7 +2,8 @@
 *.pyc
 *~
 __pycache__
-
+venv
+myvenv
 # IDE
 .idea/*
 app/__pycache__/

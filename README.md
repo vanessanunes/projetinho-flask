@@ -2,6 +2,12 @@
 
 Em Python 3.5
 
+
+## Criar virtualenv:
+
+```python3 -m venv venv```
+
+
 ## Para entrar no virtualenv:
 
 ```. venv/bin/activate```
