@@ -52,7 +52,11 @@
               <a class="nav-link" href="#">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              {% if current_user.is_authenticated %}
+                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+              {% else %}
+                <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+              {% endif %}
             </li>
           </ul>
         </div>
@@ -64,6 +68,19 @@
       <div class="row">
         <div class="col-lg-8 text-center">
           <br>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert alert-warning">
+                        <ul class="flashes">
+                        {% for message in messages %}
+                            <li> {{ message }} </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif%}
+            {% endwith %}
+
 
             <!-- inicio de conteudo da página -->
 

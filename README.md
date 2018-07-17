@@ -25,6 +25,12 @@ Caso precise instalar um novo pacote no projeto, rode esse script para atualizar
 ```$ pip3 install -r requirements.txt```
 
 
+## Comandos para banco
+
+``` python3 run.py db migrate ```
+``` python3 run.py db upgrade ```
+
+
 ## Para acessar aplicação via url:
 
 ### Rodar pelo terminal:

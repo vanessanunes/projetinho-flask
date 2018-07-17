@@ -6,4 +6,4 @@ venv
 myvenv
 # IDE
 .idea/*
-app/__pycache__/
+app/__pycache__/*
